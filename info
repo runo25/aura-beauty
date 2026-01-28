@@ -1,0 +1,9 @@
+use this color #5f0b18 for the assent color
+and #fffbed for the white
+and font-family : lato for the extal font like the one on the price
+please avoid styling the body div section or any html tag directly as it might affect others code as well instead create custom class like:
+    runor_hero
+    runor_section2_p
+    runor_section3_h2
+
+write only on your section

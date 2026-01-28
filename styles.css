@@ -1,0 +1,40 @@
+/* Lustria Regular */
+@font-face {
+  font-family: 'Lustria';
+  src: url('fonts/lustria.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+
+/* Lato Weights */
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato_slim.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato_meduim.woff2') format('woff2'); /* matches your filename typo */
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/lato_bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lustria", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
