@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/lato_meduim.woff2') format('woff2'); /* matches your filename typo */
+  src: url('fonts/lato_meduim.woff2') format('woff2'); 
   font-weight: 500;
   font-display: swap;
 }
@@ -29,6 +29,15 @@
   font-display: swap;
 }
 
+@keyframes nav-scroll-animation {
+    to {
+        background-color: #5f0b18; 
+        padding: 20px 100px; 
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px); 
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -37,4 +46,422 @@
     font-weight: 400;
     font-style: normal;
 
+}
+body{
+    background-color: #fffbed;
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.has-dropdown::after {
+    content: ""; /* Required for pseudo-elements to show up */
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    
+    /* The Magic Triangle Logic */
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #fffbed; 
+}
+
+.navbar {
+    padding: 45px 100px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: transparent; 
+    
+    animation: nav-scroll-animation linear both;
+    
+    animation-timeline: scroll();
+    
+    animation-range: 0px 200px;
+}
+
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.221), rgba(0, 0, 0, 0.232)), url('images/banner2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    width: 100%;
+}
+
+.nav_icons span img{
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    margin: 10px;
+}
+.nav_icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_links a {  
+    font-family: 'Lato', sans-serif;
+    font-weight: 500; 
+    text-transform: uppercase;
+    color: #fffbed; 
+    font-size: 1.1rem; 
+}
+
+/* Keep the layout rules on the parent container */
+.nav_links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.underline {
+    text-decoration: underline;
+}
+
+.runor_hamburger {
+    display: none; 
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+/*                                         hero                                 */
+.runor_hero{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.runor_hero_left{
+    width: 50%;
+}
+.runor_hero_right{
+    width: 50%;
+    margin-top: 10rem;
+}
+.runor_header_h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #fffbed;
+}
+
+.runor_header_btn {
+    margin-top: 20px;
+    padding: 1.2rem 2rem;
+    letter-spacing: 1.3px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #fffbed;
+    border: none;
+    border-radius: 5px;
+}
+
+.runor_header_p{
+    font-family: 'Lato', sans-serif;
+    margin-top: 20px;
+    color: #fffbed;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 50%; 
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.active {
+    background-color: #fffbed;
+}
+.slider-dots {
+    margin : 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.runor_colaboration_logo {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.runor_colaboration_logo img {
+    max-width: 10rem;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/*                              creams                           */
+.runor_category_section {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 80px 50px;
+    background-color: #fff8f0;
+}
+
+
+.runor_category_card {
+    position: relative;
+    flex: 1; 
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.runor_category_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+
+.runor_category_card:hover img {
+    transform: scale(1.05);
+}
+
+
+.runor_category_text {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%; 
+    text-align: center;
+    
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: serif; 
+    
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+
+/*                              New Arrivals                           */
+
+.runor_new_arrivals {
+    background-color: #fffbf0;
+    padding: 80px 100px;
+}
+
+.runor_header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.runor_title {
+    font-size: 3rem;
+    color: #3e0e0e;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: serif;
+}
+
+.runor_subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+.runor_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 30px;
+}
+
+.runor_card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.runor_image_box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+    overflow: hidden;
+}
+
+.runor_image_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.runor_badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #3e0e0e;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+.runor_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: serif;
+}
+
+.runor_name {
+    font-size: 1.2rem;
+    color: #3e0e0e;
+    font-weight: 400;
+}
+
+.runor_price {
+    font-family: "Lato", serif;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+@media (max-width: 1324px) {
+
+    .navbar {
+        padding: 40px 70px; 
+    }
+
+
+@media (max-width: 1024px) {
+    .runor_new_arrivals {
+        padding: 60px 40px;
+    }
+    .runor_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar {
+        padding: 30px 50px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .runor_new_arrivals {
+        padding: 40px 20px;
+    }
+    .runor_grid {
+        grid-template-columns: 1fr;
+    }
+    .runor_title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .runor_category_section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .runor_category_card {
+        height: 400px; 
+    }
+}
+
+
+@media (max-width: 968px) {
+
+    @keyframes nav-scroll-animation {
+        to {
+            background-color: #5f0b18; 
+            padding: 15px 20px; 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px); 
+        }
+    }
+
+    
+    .navbar {
+        padding: 20px; 
+        animation-range: 0px 100px; 
+    }
+
+    
+    .nav_links {
+        display: none;
+    }
+
+    
+    .runor_hamburger {
+        display: block;
+        order: 1; 
+    }
+
+    .runor_logo {
+        order: 2;
+    }
+    
+    .nav_icons {
+        order: 3;
+    }
+    
+    .nav_icons span img {
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: 10px;
+    }
+
+    .runor_hero {
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+    }
+
+    .runor_hero_left {
+        display: none; 
+    }
+
+    .runor_hero_right {
+        width: 100%;
+        margin-top: 120px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .runor_header_h1 {
+        font-size: 3rem; 
+        line-height: 1.1;
+    }
+
+    .runor_header_p {
+        font-size: 1rem;
+    }
+
+    .slider-dots {
+        margin: 0;
+        padding: 50px 0;
+    }
 }
