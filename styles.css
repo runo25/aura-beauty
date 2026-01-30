@@ -353,7 +353,7 @@ a{
     .navbar {
         padding: 40px 70px; 
     }
-
+}
 
 @media (max-width: 1024px) {
     .runor_new_arrivals {
@@ -465,6 +465,13 @@ a{
         padding: 50px 0;
     }
 }
+
+
+
+
+
+/* ####################################################################################### */
+/*                           Samuel's CSS                             */
 .samuel_section1{
   display: flex;
   gap: 40px;
